@@ -165,7 +165,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_step9_app_output(self):
         out = subprocess.check_output('python3 accounting.py', shell=True)
-
+        self.maxDiff = None
         output = out.decode("utf-8").strip()
         self.assertEqual("""[Package] User package loaded.
 [Module] User Authentication loaded.
